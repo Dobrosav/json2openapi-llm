@@ -1,13 +1,36 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
 # Python virtual environments
 venv/
 .venv/
 env/
 ENV/
 
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
+# Datasets and generated data
+data/
+datasets/
+*.jsonl
+*.csv
+*.parquet
+
+# Machine learning & Model checkpoints
+checkpoints/
+models/
+runs/
+results/
+wandb/
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.gguf
+*.onnx
+
+# Caches (Hugging Face, PyTorch, etc.)
+.cache/
 
 # Distribution / packaging
 build/
@@ -19,12 +42,15 @@ dist/
 .coverage
 htmlcov/
 
+# Logs
+*.log
+
 # Environment variables & secrets
 .env
 .env.local
 *.env
 
-# IDE / Editor
+# IDE / Editor settings
 .vscode/
 .idea/
 *.swp
@@ -33,10 +59,3 @@ htmlcov/
 # OS generated files
 .DS_Store
 Thumbs.db
-
-# Large datasets & Model artifacts (uncomment if needed)
-# data/
-# *.jsonl
-# *.pt
-# *.bin
-# *.safetensors

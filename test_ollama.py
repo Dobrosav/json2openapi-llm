@@ -43,11 +43,13 @@ raw_yaml = response.json()["response"].strip()
 print("--- GENERATED YAML ---")
 print(raw_yaml)
 
+# 1. Parse YAML
 schema = yaml.safe_load(raw_yaml)
 
-
+# 2. Validate OpenAPI 3.0 schema
 OAS30Validator.check_schema(schema)
 
+# 3. Validate input JSON against generated schema
 OAS30Validator(schema).validate(sample_json)
 
-print("\n SUCCESS SCHEME VALIDATION!")
+print("\n SUCCESS SCHEMA VALIDATION!")
