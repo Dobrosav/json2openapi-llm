@@ -3,3 +3,4 @@ pyyaml
 openapi-schema-validator
 datasets 
 scikit-learn
+matplotlib
